@@ -58,7 +58,7 @@ export type CompareWithFn = (a: any, b: any) => boolean;
 @Component({
     selector: 'ng-select',
     templateUrl: './ng-select.component.html',
-    styleUrls: ['./ng-select.component.scss'],
+    styleUrls: ['./ng-select.component.less'],
     providers: [{
         provide: NG_VALUE_ACCESSOR,
         useExisting: forwardRef(() => NgSelectComponent),

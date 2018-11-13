@@ -1,23 +1,15 @@
-@mixin box-sizing() {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-@mixin wrapt-text() {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
 .ng-select {
     position: relative;
     display: block;
-    @include box-sizing;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     div,
     input,
     span {
-        @include box-sizing;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
     }
     [hidden] {
         display: none;
@@ -90,9 +82,13 @@
         }
         .ng-select-container {
             .ng-value-container {
-                @include wrapt-text;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
                 .ng-value {
-                    @include wrapt-text;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                     .ng-value-icon {
                         display: none;
                     }

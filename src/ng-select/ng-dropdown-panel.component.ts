@@ -49,7 +49,7 @@ const BOTTOM_CSS_CLASS = 'ng-select-bottom';
             <ng-container [ngTemplateOutlet]="footerTemplate"></ng-container>
         </div>
     `,
-    styleUrls: ['./ng-dropdown-panel.component.scss']
+    styleUrls: ['./ng-dropdown-panel.component.less']
 })
 export class NgDropdownPanelComponent implements OnInit, OnChanges, OnDestroy, AfterContentInit {
 
