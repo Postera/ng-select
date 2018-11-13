@@ -76,6 +76,7 @@ export class NgSelectComponent implements OnDestroy, OnChanges, AfterViewInit, C
 
     // inputs
     @Input() items: any[] = [];
+    @Input() defaultLabel: string = null;
     @Input() bindLabel: string;
     @Input() bindValue: string;
     @Input() clearable = true;
@@ -616,7 +617,7 @@ export class NgSelectComponent implements OnDestroy, OnChanges, AfterViewInit, C
                     this.itemsList.select(this.itemsList.mapItem(val, null));
                 } else if (this.bindValue) {
                     item = {
-                        [this.bindLabel]: null,
+                        [this.bindLabel]: this.defaultLabel,
                         [this.bindValue]: val
                     };
                     this.itemsList.select(this.itemsList.mapItem(item, null));
